@@ -30,6 +30,9 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+    buildFeatures {
+        viewBinding true
+    }
 }
 
 dependencies {
@@ -42,5 +45,23 @@ dependencies {
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+
+    // Scalable size unit
+    implementation 'com.intuit.sdp:sdp-android:1.0.6'
+
+    // scalable size unit for texts
+    implementation 'com.intuit.ssp:ssp-android:1.0.6'
+
+    // Rounded ImageView
+    implementation 'jp.co.cyberagent.android:gpuimage:2.1.0'
+
+    // GPUImage for Android - Android filters based on OpenGl
+    implementation 'jp.co.cyberagent.android:gpuimage:2.1.0'
+
+    // Dependency Injection - Koin
+    implementation 'org.koin:koin-androidx-viewmodel:2.0.0'
+
+    // ViewModel
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx-2.3.1'
 
 }
