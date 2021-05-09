@@ -53,7 +53,7 @@ dependencies {
     implementation 'com.intuit.ssp:ssp-android:1.0.6'
 
     // Rounded ImageView
-    implementation 'jp.co.cyberagent.android:gpuimage:2.1.0'
+    implementation 'com.makeramen:roundedimageview:2.3.0'
 
     // GPUImage for Android - Android filters based on OpenGl
     implementation 'jp.co.cyberagent.android:gpuimage:2.1.0'
@@ -62,6 +62,6 @@ dependencies {
     implementation 'org.koin:koin-androidx-viewmodel:2.0.0'
 
     // ViewModel
-    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx-2.3.1'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1'
 
 }
