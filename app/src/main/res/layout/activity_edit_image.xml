@@ -47,12 +47,14 @@
     </LinearLayout>
 
     <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imagePreview"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:scaleType="centerCrop"
+        android:visibility="invisible"
         app:layout_constraintBottom_toTopOf="@id/filtersRecyclerView"
         app:layout_constraintTop_toBottomOf="@id/layoutHeader"
-        tools:src="@drawable/landing_background_image_6" />
+        tools:src="@drawable/landing_background_image_2" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/filtersRecyclerView"
