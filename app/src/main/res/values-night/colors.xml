@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary">#2B398E</color>
+    <color name="primaryDark">#253078</color>
+    <color name="secondary">#FEEAA5</color>
+    <color name="primaryText">#AEACAC</color>
+    <color name="secondaryText">#FFFEFE</color>
+    <color name="landingBackgroundCenter">#DCE3E1E1</color>
+    <color name="landingBackgroundEnd">#F6E8E6E6</color>
+    <color name="buttonSavedImages">#81C784</color>
+    <color name="buttonEditNewImage">#FFB74D</color>
+    <color name="white">#FFFFFF</color>
+</resources>
