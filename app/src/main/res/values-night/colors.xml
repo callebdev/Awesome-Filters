@@ -5,8 +5,8 @@
     <color name="secondary">#FEEAA5</color>
     <color name="primaryText">#AEACAC</color>
     <color name="secondaryText">#FFFEFE</color>
-    <color name="landingBackgroundCenter">#DCE3E1E1</color>
-    <color name="landingBackgroundEnd">#F6E8E6E6</color>
+    <color name="landingBackgroundCenter">#DC000000</color>
+    <color name="landingBackgroundEnd">#F6000000</color>
     <color name="buttonSavedImages">#81C784</color>
     <color name="buttonEditNewImage">#FFB74D</color>
     <color name="white">#FFFFFF</color>
