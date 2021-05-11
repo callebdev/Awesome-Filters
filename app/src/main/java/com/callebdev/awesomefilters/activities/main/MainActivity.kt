@@ -1,9 +1,10 @@
-package com.callebdev.awesomefilters
+package com.callebdev.awesomefilters.activities.main
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.provider.MediaStore
+import com.callebdev.awesomefilters.activities.editimage.EditImageActivity
 import com.callebdev.awesomefilters.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {

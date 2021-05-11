@@ -3,15 +3,16 @@
     package="com.callebdev.awesomefilters">
 
     <application
+        android:name=".dependencyinjection.AppConfig"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AwesomeFilters">
-        <activity android:name=".EditImageActivity"></activity>
+        <activity android:name=".activities.editimage.EditImageActivity" />
         <activity
-            android:name=".MainActivity"
+            android:name=".activities.main.MainActivity"
             android:theme="@style/FullScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

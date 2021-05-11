@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
+    id 'koin'
 }
 
 android {
@@ -60,6 +61,7 @@ dependencies {
 
     // Dependency Injection - Koin
     /// implementation 'org.koin:koin-androidx-viewmodel:2.0.0'
+    implementation "org.koin:koin-androidx-viewmodel:2.2.2"
 
     // ViewModel
     implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1'
