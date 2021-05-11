@@ -91,6 +91,17 @@ class EditImageActivity : AppCompatActivity(), ImageFilterListener {
         binding.imageBack.setOnClickListener {
             onBackPressed()
         }
+
+        /* When we long click on imagePreview we will see the original image
+           until we release
+         */
+        binding.imagePreview.setOnLongClickListener {
+            binding.imagePreview.setImageBitmap(originalBitmap)
+            return@setOnLongClickListener false
+        }
+        binding.imagePreview.setOnClickListener {
+            binding.imagePreview.setImageBitmap(filteredBitmap.value)
+        }
     }
 
     override fun onFilterSelected(imageFilter: ImageFilter) {
