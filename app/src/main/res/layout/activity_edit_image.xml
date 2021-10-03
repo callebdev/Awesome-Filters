@@ -36,13 +36,25 @@
             android:textColor="@color/white"
             android:textSize="@dimen/_14sdp" />
 
-        <ImageView
-            android:id="@+id/imageDone"
-            android:layout_width="@dimen/_24sdp"
-            android:layout_height="@dimen/_24sdp"
-            android:contentDescription="@string/app_name"
-            android:src="@drawable/ic_done"
-            app:tint="@color/white" />
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imageSave"
+                android:layout_width="@dimen/_22sdp"
+                android:layout_height="@dimen/_22sdp"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/ic_done"
+                app:tint="@color/white" />
+
+            <ProgressBar
+                android:id="@+id/savingProgressBar"
+                android:layout_width="@dimen/_22sdp"
+                android:visibility="gone"
+                android:layout_height="@dimen/_22sdp" />
+
+        </FrameLayout>
 
     </LinearLayout>
 
