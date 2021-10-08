@@ -6,6 +6,7 @@ import android.provider.MediaStore
 import androidx.appcompat.app.AppCompatActivity
 import com.callebdev.awesomefilters.activities.editimage.EditImageActivity
 import com.callebdev.awesomefilters.activities.savedimages.SavedImagesActivity
+import com.callebdev.awesomefilters.activities.takephoto.TakePhotoActivity
 import com.callebdev.awesomefilters.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -25,7 +26,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setupListeners() {
-        binding.buttonEditNewImage.setOnClickListener {
+        binding.buttonEditImageFromGallery.setOnClickListener {
             Intent(
                 Intent.ACTION_PICK,
                 MediaStore.Images.Media.EXTERNAL_CONTENT_URI
@@ -37,6 +38,11 @@ class MainActivity : AppCompatActivity() {
 
         binding.buttonViewSavedImages.setOnClickListener {
             Intent(applicationContext, SavedImagesActivity::class.java).also {
+                startActivity(it)
+            }
+        }
+        binding.buttonTakePhoto.setOnClickListener {
+            Intent(applicationContext, TakePhotoActivity::class.java).also {
                 startActivity(it)
             }
         }

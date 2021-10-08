@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.callebdev.awesomefilters">
 
+    <uses-feature android:name="android.hardware.camera.any" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
     <application
         android:name=".dependencyinjection.AppConfig"
         android:allowBackup="true"
@@ -11,7 +14,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AwesomeFilters">
         <activity
-            android:name="com.callebdev.awesomefilters.activities.savedimages.SavedImagesActivity" />
+            android:name=".activities.takephoto.TakePhotoActivity"
+            android:exported="true" />
+        <activity android:name=".activities.savedimages.SavedImagesActivity" />
         <activity android:name=".activities.filteredimage.FilteredImageActivity" />
         <activity android:name=".activities.editimage.EditImageActivity" />
         <activity

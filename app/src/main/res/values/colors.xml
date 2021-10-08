@@ -8,7 +8,8 @@
     <color name="landingBackgroundCenter">#DC000000</color>
     <color name="landingBackgroundEnd">#F6000000</color>
     <color name="buttonSavedImages">#81C784</color>
-    <color name="buttonEditNewImage">#FFB74D</color>
+    <color name="buttonEditImageFromGallery">#FFB74D</color>
+    <color name="buttonTakePhoto">@color/primary</color>
     <color name="white">#FFFFFF</color>
     <color name="black">#000000</color>
 </resources>

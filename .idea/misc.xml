@@ -3,10 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Calleb/AndroidStudioProjects/Personal/Awesome-Filters/app/src/main/res/drawable-v24/shape_background_round.xml" value="0.403125" />
         <entry key="..\:/Users/Calleb/AndroidStudioProjects/Personal/Awesome-Filters/app/src/main/res/layout/activity_edit_image.xml" value="0.38697916666666665" />
         <entry key="..\:/Users/Calleb/AndroidStudioProjects/Personal/Awesome-Filters/app/src/main/res/layout/activity_filtered_image.xml" value="0.38697916666666665" />
         <entry key="..\:/Users/Calleb/AndroidStudioProjects/Personal/Awesome-Filters/app/src/main/res/layout/activity_main.xml" value="0.38697916666666665" />
         <entry key="..\:/Users/Calleb/AndroidStudioProjects/Personal/Awesome-Filters/app/src/main/res/layout/activity_saved_images.xml" value="0.38697916666666665" />
+        <entry key="..\:/Users/Calleb/AndroidStudioProjects/Personal/Awesome-Filters/app/src/main/res/layout/activity_take_photo.xml" value="0.3729166666666667" />
         <entry key="..\:/Users/Calleb/AndroidStudioProjects/Personal/Awesome-Filters/app/src/main/res/layout/item_container_saved_image.xml" value="0.38697916666666665" />
       </map>
     </option>

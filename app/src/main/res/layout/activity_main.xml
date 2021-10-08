@@ -18,21 +18,37 @@
         android:background="@drawable/landing_background" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/buttonEditNewImage"
+        android:id="@+id/buttonEditImageFromGallery"
         android:layout_width="match_parent"
         android:layout_height="@dimen/_45sdp"
         android:layout_marginHorizontal="@dimen/_12sdp"
         android:layout_marginBottom="@dimen/_4sdp"
         android:fontFamily="@font/poppins_semi_bold"
         android:includeFontPadding="false"
-        android:text="@string/edit_new_image"
+        android:text="Edit image from Gallery"
         android:textColor="@color/white"
         android:textSize="@dimen/_12sdp"
-        app:backgroundTint="@color/buttonEditNewImage"
+        app:backgroundTint="@color/buttonEditImageFromGallery"
+        app:cornerRadius="@dimen/_20sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/buttonTakePhoto" />
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonTakePhoto"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_45sdp"
+        android:layout_marginHorizontal="@dimen/_12sdp"
+        android:layout_marginBottom="@dimen/_4sdp"
+        android:fontFamily="@font/poppins_semi_bold"
+        android:includeFontPadding="false"
+        android:text="Take photo"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_12sdp"
+        app:backgroundTint="@color/buttonTakePhoto"
         app:cornerRadius="@dimen/_20sdp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintBottom_toTopOf="@id/buttonViewSavedImages" />
-
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/buttonViewSavedImages"
@@ -61,7 +77,7 @@
         android:text="@string/complement_the_incredible_quality_of_your_photos_with_beauty_details"
         android:textColor="@color/white"
         android:textSize="@dimen/_13ssp"
-        app:layout_constraintBottom_toTopOf="@id/buttonEditNewImage" />
+        app:layout_constraintBottom_toTopOf="@id/buttonEditImageFromGallery" />
 
     <TextView
         android:id="@+id/textTitle"
