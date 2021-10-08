@@ -4,6 +4,53 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".savedimages.SavedImagesActivity">
+    tools:context=".activities.savedimages.SavedImagesActivity">
+
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbarSavedImages"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/primary"
+        android:elevation="@dimen/_4sdp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIcon="@drawable/ic_back"
+        app:navigationIconTint="@color/white"
+        app:titleTextColor="@color/white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_8sdp"
+            android:fontFamily="@font/poppins_semi_bold"
+            android:includeFontPadding="false"
+            android:text="@string/saved_images"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14sdp" />
+
+    </com.google.android.material.appbar.MaterialToolbar>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/savedImagesRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:clipToPadding="false"
+        android:padding="@dimen/_6sdp"
+        android:visibility="visible"
+        tools:listitem="@layout/item_container_saved_image"
+        app:layoutManager="androidx.recyclerview.widget.StaggeredGridLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbarSavedImages"
+        app:spanCount="3" />
+
+
+    <ProgressBar
+        android:id="@+id/savedImagesProgressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@id/savedImagesRecyclerView"
+        app:layout_constraintStart_toStartOf="@id/savedImagesRecyclerView"
+        app:layout_constraintEnd_toEndOf="@id/savedImagesRecyclerView"
+        app:layout_constraintTop_toTopOf="@id/savedImagesRecyclerView"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

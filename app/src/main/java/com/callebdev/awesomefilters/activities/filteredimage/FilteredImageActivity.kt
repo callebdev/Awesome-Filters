@@ -24,6 +24,7 @@ class FilteredImageActivity : AppCompatActivity() {
     private fun setupUi() {
         intent.getParcelableExtra<Uri>(EditImageActivity.KEY_FILTERED_IMAGE_URI)?.let {
             fileUri = it
+            binding.imageFilteredImageBlurredBackground.setImageURI(it)
             binding.imageFilteredImage.setImageURI(it)
         }
     }

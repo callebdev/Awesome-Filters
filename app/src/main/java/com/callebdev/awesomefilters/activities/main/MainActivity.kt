@@ -1,12 +1,12 @@
 package com.callebdev.awesomefilters.activities.main
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.provider.MediaStore
+import androidx.appcompat.app.AppCompatActivity
 import com.callebdev.awesomefilters.activities.editimage.EditImageActivity
+import com.callebdev.awesomefilters.activities.savedimages.SavedImagesActivity
 import com.callebdev.awesomefilters.databinding.ActivityMainBinding
-import com.callebdev.awesomefilters.savedimages.SavedImagesActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -40,7 +40,6 @@ class MainActivity : AppCompatActivity() {
                 startActivity(it)
             }
         }
-
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
@@ -54,6 +53,5 @@ class MainActivity : AppCompatActivity() {
                 }
             }
         }
-
     }
 }

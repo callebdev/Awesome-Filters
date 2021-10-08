@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.makeramen.roundedimageview.RoundedImageView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/imageSaved"
+    android:adjustViewBounds="true"
+    tools:src="@drawable/landing_background_image_2"
+    android:layout_margin="@dimen/_2sdp"
+    app:riv_corner_radius="@dimen/_8sdp" />

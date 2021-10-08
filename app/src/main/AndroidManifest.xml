@@ -11,8 +11,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AwesomeFilters">
         <activity
-            android:name=".savedimages.SavedImagesActivity"
-            android:exported="true" />
+            android:name="com.callebdev.awesomefilters.activities.savedimages.SavedImagesActivity" />
         <activity android:name=".activities.filteredimage.FilteredImageActivity" />
         <activity android:name=".activities.editimage.EditImageActivity" />
         <activity
