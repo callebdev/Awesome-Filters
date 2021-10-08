@@ -34,18 +34,18 @@ class EditImageViewModel(private val editImageRepository: EditImageRepository) :
     }
 
     private fun emitImagePreviewUiState(
-            isLoading: Boolean = false,
-            bitmap: Bitmap? = null,
-            error: String? = null
+        isLoading: Boolean = false,
+        bitmap: Bitmap? = null,
+        error: String? = null
     ) {
         val dataState = ImagePreviewDataState(isLoading, bitmap, error)
         imagePreviewDataState.postValue(dataState)
     }
 
     data class ImagePreviewDataState(
-            val isLoading: Boolean,
-            val bitmap: Bitmap?,
-            val error: String?
+        val isLoading: Boolean,
+        val bitmap: Bitmap?,
+        val error: String?
     )
 
     // endregion
@@ -77,18 +77,18 @@ class EditImageViewModel(private val editImageRepository: EditImageRepository) :
     }
 
     private fun emitImageFiltersUiState(
-            isLoading: Boolean = false,
-            imageFilters: List<ImageFilter>? = null,
-            error: String? = null
+        isLoading: Boolean = false,
+        imageFilters: List<ImageFilter>? = null,
+        error: String? = null
     ) {
         val dataState = ImageFiltersDataState(isLoading, imageFilters, error)
         imageFiltersDataState.postValue(dataState)
     }
 
     data class ImageFiltersDataState(
-            val isLoading: Boolean,
-            val imageFilters: List<ImageFilter>?,
-            val error: String?
+        val isLoading: Boolean,
+        val imageFilters: List<ImageFilter>?,
+        val error: String?
     )
 
     // endregion
@@ -111,18 +111,18 @@ class EditImageViewModel(private val editImageRepository: EditImageRepository) :
     }
 
     private fun emitSaveFilteredImageUiState(
-            isLoading: Boolean = false,
-            uri: Uri? = null,
-            error: String? = null
+        isLoading: Boolean = false,
+        uri: Uri? = null,
+        error: String? = null
     ) {
         val dataState = SaveFilteredImageDataState(isLoading, uri, error)
         saveFilteredImageDataState.postValue(dataState)
     }
 
     data class SaveFilteredImageDataState(
-            val isLoading: Boolean,
-            val uri: Uri?,
-            val error: String?
+        val isLoading: Boolean,
+        val uri: Uri?,
+        val error: String?
     )
 
     // endregion

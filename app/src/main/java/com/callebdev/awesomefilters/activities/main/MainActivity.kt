@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.provider.MediaStore
 import com.callebdev.awesomefilters.activities.editimage.EditImageActivity
 import com.callebdev.awesomefilters.databinding.ActivityMainBinding
+import com.callebdev.awesomefilters.savedimages.SavedImagesActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -20,10 +21,10 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        setListeners()
+        setupListeners()
     }
 
-    private fun setListeners() {
+    private fun setupListeners() {
         binding.buttonEditNewImage.setOnClickListener {
             Intent(
                 Intent.ACTION_PICK,
@@ -33,6 +34,13 @@ class MainActivity : AppCompatActivity() {
                 startActivityForResult(pickerIntent, REQUEST_CODE_PICK_IMAGE)
             }
         }
+
+        binding.buttonViewSavedImages.setOnClickListener {
+            Intent(applicationContext, SavedImagesActivity::class.java).also {
+                startActivity(it)
+            }
+        }
+
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {

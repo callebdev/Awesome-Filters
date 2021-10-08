@@ -10,12 +10,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AwesomeFilters">
+        <activity
+            android:name=".savedimages.SavedImagesActivity"
+            android:exported="true" />
         <activity android:name=".activities.filteredimage.FilteredImageActivity" />
         <activity android:name=".activities.editimage.EditImageActivity" />
         <activity
             android:name=".activities.main.MainActivity"
-            android:theme="@style/FullScreen"
-            android:exported="true">
+            android:exported="true"
+            android:theme="@style/FullScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

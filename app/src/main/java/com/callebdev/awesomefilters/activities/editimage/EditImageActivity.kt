@@ -3,12 +3,11 @@ package com.callebdev.awesomefilters.activities.editimage
 import android.content.Intent
 import android.graphics.Bitmap
 import android.net.Uri
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModelProviders
 import com.callebdev.awesomefilters.activities.filteredimage.FilteredImageActivity
 import com.callebdev.awesomefilters.activities.main.MainActivity
 import com.callebdev.awesomefilters.adapters.ImageFiltersAdapter
@@ -61,7 +60,6 @@ class EditImageActivity : AppCompatActivity(), ImageFilterListener {
                     binding.imagePreview.show()
                     viewModel.loadImageFilters(this)
                 }
-
             } ?: kotlin.run {
                 dataState.error?.let { error ->
                     displayToast(error)
@@ -88,7 +86,6 @@ class EditImageActivity : AppCompatActivity(), ImageFilterListener {
         viewModel.saveFilteredImageUiState.observe(this) {
 
             val savedFilteredImageDataState = it ?: return@observe
-
 
             if (savedFilteredImageDataState.isLoading) {
                 binding.imageSave.visibility = View.GONE

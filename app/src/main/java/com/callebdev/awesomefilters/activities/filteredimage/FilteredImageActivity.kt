@@ -1,12 +1,41 @@
 package com.callebdev.awesomefilters.activities.filteredimage
 
-import androidx.appcompat.app.AppCompatActivity
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
-import com.callebdev.awesomefilters.R
+import androidx.appcompat.app.AppCompatActivity
+import com.callebdev.awesomefilters.activities.editimage.EditImageActivity
+import com.callebdev.awesomefilters.databinding.ActivityFilteredImageBinding
 
 class FilteredImageActivity : AppCompatActivity() {
+
+    private lateinit var binding: ActivityFilteredImageBinding
+
+    private lateinit var fileUri: Uri
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_filtered_image)
+        binding = ActivityFilteredImageBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+        setupUi()
+        setupListeners()
+    }
+
+    private fun setupUi() {
+        intent.getParcelableExtra<Uri>(EditImageActivity.KEY_FILTERED_IMAGE_URI)?.let {
+            fileUri = it
+            binding.imageFilteredImage.setImageURI(it)
+        }
+    }
+
+    private fun setupListeners() {
+        binding.fabShareFilteredImage.setOnClickListener {
+            with(Intent(Intent.ACTION_SEND)) {
+                putExtra(Intent.EXTRA_STREAM, fileUri)
+                addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
+                type = "image/*"
+                startActivity(this)
+            }
+        }
     }
 }

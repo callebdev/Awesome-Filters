@@ -10,4 +10,5 @@
     <color name="buttonSavedImages">#81C784</color>
     <color name="buttonEditNewImage">#FFB74D</color>
     <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
 </resources>
