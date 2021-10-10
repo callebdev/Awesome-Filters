@@ -17,6 +17,7 @@ import androidx.lifecycle.lifecycleScope
 import com.callebdev.awesomefilters.activities.editimage.EditImageActivity
 import com.callebdev.awesomefilters.activities.main.MainActivity
 import com.callebdev.awesomefilters.databinding.ActivityTakePhotoBinding
+import com.callebdev.awesomefilters.utilities.Constants
 import com.callebdev.awesomefilters.utilities.getOutputDirectory
 import com.google.common.util.concurrent.ListenableFuture
 import kotlinx.coroutines.launch
@@ -34,15 +35,7 @@ class TakePhotoActivity : AppCompatActivity() {
     private var imageCapture: ImageCapture? = null
     private lateinit var outputDirectory: File
 
-    private val activityResultLauncher = registerForActivityResult(
-        ActivityResultContracts.RequestPermission()
-    ) { isGranted ->
-        if (isGranted) {
-            startCamera()
-        } else {
-            onBackPressed()
-        }
-    }
+    private val activityResultLauncher = registerForActivityResult(ActivityResultContracts.RequestPermission()) { isGranted -> if (isGranted) startCamera() else onBackPressed() }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -59,12 +52,10 @@ class TakePhotoActivity : AppCompatActivity() {
     }
 
     private fun setupListeners() {
-        binding.btnTakePhoto.setOnClickListener {
-            takePhoto()
-        }
-
-        binding.btnFlipCamera.setOnClickListener {
-            flipCamera()
+        binding.btnTakePhoto.setOnClickListener { takePhoto() }
+        binding.btnFlipCamera.setOnClickListener { flipCamera() }
+        binding.btnFlash.setOnCheckedChangeListener { _, isChecked ->
+            imageCapture?.flashMode = if (isChecked) ImageCapture.FLASH_MODE_ON else ImageCapture.FLASH_MODE_OFF
         }
     }
 
@@ -81,7 +72,7 @@ class TakePhotoActivity : AppCompatActivity() {
                 it.setSurfaceProvider(binding.previewView.surfaceProvider)
             }
 
-            imageCapture = ImageCapture.Builder().setTargetResolution(Size(720, 400)).build() // TODO: Move sizes to constants
+            imageCapture = ImageCapture.Builder().setTargetResolution(Size(Constants.IMAGE_CAPTURE_WIDTH, Constants.IMAGE_CAPTURE_HEIGHT)).build()
 
             try {
                 // unbind use cases before rebinding
@@ -95,7 +86,7 @@ class TakePhotoActivity : AppCompatActivity() {
                     imageCapture
                 )
             } catch (e: Exception) {
-                Log.d(TAG, "cameraProviderRunnableListener:")
+                Log.d(TAG, "cameraProviderRunnableListener: ${e.message}")
             }
         }
     }

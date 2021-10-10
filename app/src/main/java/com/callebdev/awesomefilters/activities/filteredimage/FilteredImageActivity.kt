@@ -4,8 +4,11 @@ import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.bumptech.glide.Glide
+import com.bumptech.glide.request.RequestOptions
 import com.callebdev.awesomefilters.activities.editimage.EditImageActivity
 import com.callebdev.awesomefilters.databinding.ActivityFilteredImageBinding
+import jp.wasabeef.glide.transformations.BlurTransformation
 
 class FilteredImageActivity : AppCompatActivity() {
 
@@ -24,7 +27,7 @@ class FilteredImageActivity : AppCompatActivity() {
     private fun setupUi() {
         intent.getParcelableExtra<Uri>(EditImageActivity.KEY_FILTERED_IMAGE_URI)?.let {
             fileUri = it
-            binding.imageFilteredImageBlurredBackground.setImageURI(it)
+            Glide.with(this).load(it).apply(RequestOptions.bitmapTransform(BlurTransformation(25, 3))).into(binding.imageFilteredImageBlurredBackground)
             binding.imageFilteredImage.setImageURI(it)
         }
     }
@@ -38,5 +41,6 @@ class FilteredImageActivity : AppCompatActivity() {
                 startActivity(this)
             }
         }
+        binding.buttonDone.setOnClickListener { finish() }
     }
 }

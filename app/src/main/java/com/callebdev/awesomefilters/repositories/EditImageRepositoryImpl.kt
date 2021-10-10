@@ -8,6 +8,7 @@ import android.os.Environment
 import android.util.Log
 import androidx.core.content.FileProvider
 import com.callebdev.awesomefilters.data.ImageFilter
+import com.callebdev.awesomefilters.utilities.Constants
 import jp.co.cyberagent.android.gpuimage.GPUImage
 import jp.co.cyberagent.android.gpuimage.filter.*
 import java.io.File
@@ -434,7 +435,7 @@ class EditImageRepositoryImpl(private val context: Context) : EditImageRepositor
         return try {
             val mediaStorageDirectory = File(
                 context.getExternalFilesDir(Environment.DIRECTORY_PICTURES),
-                "Saved Images"
+                Constants.SAVED_IMAGES_DIRECTORY
             )
             if (!mediaStorageDirectory.exists()) {
                 mediaStorageDirectory.mkdir()

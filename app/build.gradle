@@ -76,4 +76,13 @@ dependencies {
     implementation("androidx.camera:camera-view:1.0.0-alpha29")
     implementation("androidx.camera:camera-extensions:1.0.0-alpha29")
 
+    // Glide
+    implementation 'com.github.bumptech.glide:glide:4.12.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.12.0'
+
+    // Blur
+    implementation 'jp.wasabeef:glide-transformations:4.3.0'
+    // If you want to use the GPU Filters
+    implementation 'jp.co.cyberagent.android:gpuimage:2.1.0'
+
 }

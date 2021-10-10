@@ -10,10 +10,9 @@
         android:id="@+id/imageFilteredImageBlurredBackground"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:contentDescription="@string/app_name"
         android:scaleType="centerCrop"
-        android:alpha="0.2"
-        tools:src="@drawable/landing_background_image_2"
-        android:contentDescription="@string/app_name" />
+        tools:src="@drawable/landing_background_image_2" />
 
     <ImageView
         android:id="@+id/imageFilteredImage"
@@ -23,6 +22,23 @@
         android:contentDescription="@string/app_name"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonDone"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_45sdp"
+        android:layout_marginHorizontal="@dimen/_25sdp"
+        android:fontFamily="@font/poppins_semi_bold"
+        android:includeFontPadding="false"
+        android:text="Done"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_12sdp"
+        app:backgroundTint="@color/buttonEditImageFromGallery"
+        app:cornerRadius="@dimen/_20sdp"
+        app:layout_constraintBottom_toBottomOf="@id/fabShareFilteredImage"
+        app:layout_constraintEnd_toStartOf="@id/fabShareFilteredImage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/fabShareFilteredImage" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fabShareFilteredImage"

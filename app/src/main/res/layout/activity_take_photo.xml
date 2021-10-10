@@ -15,72 +15,63 @@
         android:id="@+id/cameraActionsContainer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center"
         android:layout_marginBottom="@dimen/_30sdp"
+        android:gravity="center"
+        android:orientation="horizontal"
         android:padding="@dimen/_5sdp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" >
+        app:layout_constraintStart_toStartOf="parent">
 
 
         <LinearLayout
             android:layout_width="0dp"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:gravity="center"
-            android:layout_height="wrap_content">
+            android:gravity="center">
 
-            <ImageButton
+            <com.google.android.material.checkbox.MaterialCheckBox
                 android:id="@+id/btnFlash"
                 android:layout_width="@dimen/_30sdp"
-                android:src="@drawable/ic_flash_on"
-                app:tint="@color/white"
                 android:layout_height="@dimen/_30sdp"
-                android:clickable="true"
-                android:backgroundTint="@color/primaryDark"
-                android:background="@drawable/shape_background_round"
-                android:focusable="true" />
+                android:button="@drawable/flash_selector"
+                android:buttonTint="@color/white"
+                android:elevation="2dp" />
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="0dp"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:gravity="center"
-            android:layout_height="wrap_content">
+            android:gravity="center">
 
-<!--            Change background tint to a semi-transparent one-->
             <ImageButton
                 android:id="@+id/btnTakePhoto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/camera_shutter_selector"
                 android:clickable="true"
+                android:contentDescription="@string/app_name"
                 android:focusable="true"
-                android:src="@drawable/ic_camera"
-                android:layout_width="@dimen/_50sdp"
-                android:layout_height="@dimen/_50sdp"
-                app:tint="@color/white"
-                android:backgroundTint="@color/primaryDark"
-                android:background="@drawable/shape_background_round"
-                android:contentDescription="@string/app_name" />
+                app:tint="@color/white" />
 
         </LinearLayout>
 
 
         <LinearLayout
             android:layout_width="0dp"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:gravity="center"
-            android:layout_height="wrap_content">
+            android:gravity="center">
 
-            <ImageButton
+            <com.google.android.material.checkbox.MaterialCheckBox
                 android:id="@+id/btnFlipCamera"
                 android:layout_width="@dimen/_30sdp"
-                android:src="@drawable/ic_camera_switch"
-                app:tint="@color/white"
                 android:layout_height="@dimen/_30sdp"
-                android:clickable="true"
-                android:backgroundTint="@color/primaryDark"
-                android:background="@drawable/shape_background_round"
-                android:focusable="true" />
+                android:button="@drawable/ic_camera_switch"
+                android:buttonTint="@color/white"
+                android:elevation="2dp" />
 
         </LinearLayout>
     </LinearLayout>

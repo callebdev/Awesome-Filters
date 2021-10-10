@@ -4,6 +4,7 @@ import android.content.Context
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.os.Environment
+import com.callebdev.awesomefilters.utilities.Constants
 import java.io.File
 
 class SavedImagesRepositoryImpl(private val context: Context) : SavedImagesRepository {
@@ -13,7 +14,7 @@ class SavedImagesRepositoryImpl(private val context: Context) : SavedImagesRepos
 
         val dir = File(
             context.getExternalFilesDir(Environment.DIRECTORY_PICTURES),
-            "Saved Images"
+            Constants.SAVED_IMAGES_DIRECTORY
         )
         dir.listFiles()?.let { data ->
             data.forEach { file ->
