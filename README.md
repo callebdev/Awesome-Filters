@@ -1,6 +1,6 @@
 # Awesome-Filters
 
-Androd app that allows users to apply GPU Image filters into images that can be picked from gallery or taken from camera. (Probably my last project using XML 🙃)
+Android app that allows users to apply GPU Image filters into images that can be picked from gallery or taken by camera. (Probably my last project using XML 🙃)
 
 ## Screenshots
 
